@@ -29,7 +29,7 @@ function MENU()
 local escolha = gg.choice({
 "💰 Mod de Valor",
 "🔍 Pesquisa Refinada",
-"⚡ Boost Fake",
+"⚡ Boost",
 "🧹 Limpar Resultados",
 "📊 Status",
 "ℹ️ Informações",

@@ -5,7 +5,7 @@
 gg.setVisible(false)
 
 local SCRIPT = "⚡ ULTRA MOD MENU"
-local VERSAO = "v3.5"
+local VERSAO = "v4.0"
 
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 -- LOADING
@@ -30,6 +30,7 @@ local escolha = gg.choice({
 "💰 Mod de Valor",
 "🔍 Pesquisa Refinada",
 "⚡ Boost",
+"🎮 Roblox Menu",
 "🧹 Limpar Resultados",
 "📊 Status",
 "ℹ️ Informações",
@@ -51,15 +52,16 @@ local escolha = gg.choice({
 if escolha == 1 then MOD() end
 if escolha == 2 then REFINE() end
 if escolha == 3 then BOOST() end
-if escolha == 4 then LIMPAR() end
-if escolha == 5 then STATUS() end
-if escolha == 6 then INFO() end
-if escolha == 7 then SAIR() end
+if escolha == 4 then ROBLOX() end
+if escolha == 5 then LIMPAR() end
+if escolha == 6 then STATUS() end
+if escolha == 7 then INFO() end
+if escolha == 8 then SAIR() end
 
 end
 
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━
--- MOD DE VALOR (EXEMPLO)
+-- MOD DE VALOR
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 function MOD()
@@ -140,6 +142,94 @@ gg.toast("🚀 Sistema otimizado!")
 gg.sleep(700)
 
 gg.toast("🔥 Boost concluído!")
+
+end
+
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-- MENU ROBLOX
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+function ROBLOX()
+
+local rb = gg.choice({
+"🦘 Infinite Jump",
+"👻 Atravessar Parede",
+"⬅️ Voltar"
+}, nil,
+
+"🎮 ROBLOX MENU\n\n"..
+"Escolha uma função:"
+)
+
+if rb == 1 then
+INFINITEJUMP()
+end
+
+if rb == 2 then
+NOCLIP()
+end
+
+if rb == 3 then
+MENU()
+end
+
+end
+
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-- INFINITE JUMP (FAKE/EXEMPLO)
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+function INFINITEJUMP()
+
+gg.clearResults()
+
+gg.toast("🦘 Ativando Infinite Jump...")
+
+gg.searchNumber("1", gg.TYPE_FLOAT)
+
+gg.sleep(1000)
+
+gg.refineNumber("1", gg.TYPE_FLOAT)
+
+local r = gg.getResults(50)
+
+if #r == 0 then
+gg.alert("❌ Nenhum resultado encontrado!")
+return
+end
+
+gg.editAll("999", gg.TYPE_FLOAT)
+
+gg.toast("✅ Infinite Jump ativado!")
+
+end
+
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-- ATRAVESSAR PAREDE (FAKE/EXEMPLO)
+--━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+function NOCLIP()
+
+gg.clearResults()
+
+gg.toast("👻 Ativando No Clip...")
+
+gg.searchNumber("0.5", gg.TYPE_FLOAT)
+
+gg.sleep(1000)
+
+gg.refineNumber("0.5", gg.TYPE_FLOAT)
+
+local r = gg.getResults(50)
+
+if #r == 0 then
+gg.alert("❌ Nenhum resultado encontrado!")
+return
+end
+
+gg.editAll("0", gg.TYPE_FLOAT)
+
+gg.toast("✅ Atravessar parede ativado!")
 
 end
 
